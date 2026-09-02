@@ -1,5 +1,7 @@
 "use client";
 
+import { asset } from "@/lib/asset";
+
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "@/components/Icons";
@@ -237,7 +239,7 @@ export default function FeaturedSequence() {
                       partRefs.current[i][0] = el;
                     }}
                   >
-                    <img src={project.image} alt="" />
+                    <img src={asset(project.image)} alt="" />
                   </div>
                   <div className="seq__body">
                     <span

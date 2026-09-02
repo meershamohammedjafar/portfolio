@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import ContactForm from "@/components/ContactForm";
 import DetectionPortrait from "@/components/DetectionPortrait";
 import { ArrowNE, Globe } from "@/components/Icons";
@@ -12,7 +13,7 @@ export const metadata = {
 const channels = [
   {
     icon: (
-      <img src="/images/badge-email.png" alt="" className="channel__badge" />
+      <img src={asset("/images/badge-email.png")} alt="" className="channel__badge" />
     ),
     label: "Email",
     value: site.email,
@@ -20,7 +21,7 @@ const channels = [
   },
   {
     icon: (
-      <img src="/images/badge-location.png" alt="" className="channel__badge" />
+      <img src={asset("/images/badge-location.png")} alt="" className="channel__badge" />
     ),
     label: "Location",
     value: site.location,
@@ -28,7 +29,7 @@ const channels = [
   },
   {
     icon: (
-      <img src="/images/badge-whatsapp.png" alt="" className="channel__badge" />
+      <img src={asset("/images/badge-whatsapp.png")} alt="" className="channel__badge" />
     ),
     label: "WhatsApp",
     value: site.whatsappLabel,
@@ -37,7 +38,7 @@ const channels = [
   {
     icon: (
       <img
-        src="/images/badge-instagram.png"
+        src={asset("/images/badge-instagram.png")}
         alt=""
         className="channel__badge"
       />
@@ -48,7 +49,7 @@ const channels = [
   },
   {
     icon: (
-      <img src="/images/badge-github.png" alt="" className="channel__badge" />
+      <img src={asset("/images/badge-github.png")} alt="" className="channel__badge" />
     ),
     label: "GitHub",
     value: site.githubLabel,
@@ -56,7 +57,7 @@ const channels = [
   },
   {
     icon: (
-      <img src="/images/badge-linkedin.png" alt="" className="channel__badge" />
+      <img src={asset("/images/badge-linkedin.png")} alt="" className="channel__badge" />
     ),
     label: "LinkedIn",
     value: site.linkedinLabel,
@@ -141,7 +142,7 @@ export default function ContactPage() {
           <span className="hero__ring" aria-hidden="true" />
           <DetectionPortrait
             className="contact__portrait contact__portrait--photo"
-            src="/images/portrait-contact.jpg"
+            src={asset("/images/portrait-contact.jpg")}
             alt={`Portrait of ${site.fullName}`}
             persistCorners
           />

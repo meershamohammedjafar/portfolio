@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CasePlate from "@/components/CasePlate";
@@ -89,7 +90,7 @@ export default async function ProjectPage({ params }) {
               <figure key={item.src} className="process-plate">
                 {item.type === "video" ? (
                   <video
-                    src={item.src}
+                    src={asset(item.src)}
                     muted
                     loop
                     playsInline
@@ -97,7 +98,7 @@ export default async function ProjectPage({ params }) {
                     preload="metadata"
                   />
                 ) : (
-                  <img src={item.src} alt={item.caption} />
+                  <img src={asset(item.src)} alt={item.caption} />
                 )}
                 <figcaption className="tag">{item.caption}</figcaption>
               </figure>

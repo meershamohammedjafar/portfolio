@@ -45,4 +45,4 @@ The Nissan Horizon videos are recordings of the prototype running in the Unreal 
 
 ## Deploying
 
-The site is a static export (`output: "export"` in `next.config.mjs`), so any static host can serve the `out/` folder. Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages.
+The site is a static export (`output: "export"` in `next.config.mjs`), so any static host can serve the `out/` folder. Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages. The workflow sets `NEXT_PUBLIC_BASE_PATH` from the repository name, so a repo called `portfolio` is served at `/portfolio/` and a repo called `<user>.github.io` at the root; every asset path goes through `lib/asset.js` for that reason.

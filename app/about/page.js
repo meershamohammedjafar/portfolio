@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Link from "next/link";
 import DetectionPortrait from "@/components/DetectionPortrait";
 import NextChapter from "@/components/NextChapter";
@@ -94,7 +95,7 @@ export default function AboutPage() {
             <span className="hero__ring" aria-hidden="true" />
             <DetectionPortrait
               className="about__portrait"
-              src="/images/portrait-about.png"
+              src={asset("/images/portrait-about.png")}
               alt={`Portrait of ${site.fullName}`}
             />
           </div>
@@ -137,7 +138,7 @@ export default function AboutPage() {
               <div className="basedin__city">{site.location}</div>
               <img
                 className="basedin__art"
-                src="/images/dubai-skyline.png"
+                src={asset("/images/dubai-skyline.png")}
                 alt=""
                 aria-hidden="true"
               />
@@ -167,7 +168,7 @@ export default function AboutPage() {
         <Reveal effect="scale" delay={120}>
           <figure className="panel buildshot">
             <img
-              src="/images/on-the-build.jpg"
+              src={asset("/images/on-the-build.jpg")}
               alt="Meersha at his desk, tracking code on the left monitor and the metro map scene on the right"
             />
             <figcaption className="tag">

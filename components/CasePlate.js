@@ -1,5 +1,7 @@
 "use client";
 
+import { asset } from "@/lib/asset";
+
 import { useEffect, useRef, useState } from "react";
 
 // The case-study hero. Renders a real capture video when one exists,
@@ -33,8 +35,8 @@ export default function CasePlate({ project }) {
       {project.heroVideo ? (
         <video
           ref={videoRef}
-          src={project.heroVideo}
-          poster={project.hero}
+          src={asset(project.heroVideo)}
+          poster={asset(project.hero)}
           muted
           loop
           playsInline
@@ -45,7 +47,7 @@ export default function CasePlate({ project }) {
         />
       ) : (
         <img
-          src={project.hero}
+          src={asset(project.hero)}
           alt={project.imageAlt}
           style={
             project.heroAspect ? { aspectRatio: project.heroAspect } : undefined

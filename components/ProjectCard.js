@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Link from "next/link";
 import { ArrowNE } from "@/components/Icons";
 
@@ -9,7 +10,7 @@ export default function ProjectCard({ project, variant = "grid" }) {
       <Link href={`/projects/${project.slug}`} className="feature-card">
         <div className="feature-card__shot">
           <img
-            src={project.image}
+            src={asset(project.image)}
             alt={project.imageAlt}
             style={
               project.thumbPositionFeatured || project.thumbPosition
@@ -42,7 +43,7 @@ export default function ProjectCard({ project, variant = "grid" }) {
     <Link href={`/projects/${project.slug}`} className="work-card">
       <div className="work-card__shot">
         <img
-          src={project.image}
+          src={asset(project.image)}
           alt={project.imageAlt}
           style={
             project.thumbPosition

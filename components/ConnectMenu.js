@@ -1,5 +1,7 @@
 "use client";
 
+import { asset } from "@/lib/asset";
+
 import { useEffect, useRef, useState } from "react";
 import { ArrowNE } from "@/components/Icons";
 import { site } from "@/data/projects";
@@ -134,7 +136,7 @@ export default function ConnectMenu() {
               rel={channel.newTab ? "noreferrer noopener" : undefined}
               onClick={() => onChannelClick(channel)}
             >
-              <img src={channel.badge} alt="" className="channel__badge" />
+              <img src={asset(channel.badge)} alt="" className="channel__badge" />
               <span>
                 <span className="connect-menu__label">{channel.label}</span>
                 <span className="connect-menu__hint tag">{channel.hint}</span>

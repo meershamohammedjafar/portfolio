@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Link from "next/link";
 import DetectionPortrait from "@/components/DetectionPortrait";
 import FeaturedSequence from "@/components/FeaturedSequence";
@@ -48,7 +49,7 @@ export default function HomePage() {
             <span className="hero__ring" aria-hidden="true" />
             <DetectionPortrait
               className="hero__portrait"
-              src="/images/portrait-home.png"
+              src={asset("/images/portrait-home.png")}
               alt={`Portrait of ${site.fullName}`}
             />
           </div>
