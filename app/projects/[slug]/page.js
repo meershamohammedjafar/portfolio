@@ -13,6 +13,8 @@ import {
 } from "@/components/Icons";
 import { getProject, projects } from "@/data/projects";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
