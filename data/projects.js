@@ -165,6 +165,83 @@ export const projects = [
       },
     ],
   },
+  {
+    slug: "du-journey-table",
+    number: "04",
+    title: "du Journey Table",
+    tagline: "Thirty du stories, chosen by turning a printed tag on a glass table.",
+    site: "du, UAE",
+    status: "Installed",
+    statusTone: "live",
+    year: "2026",
+    location: "UAE",
+    role: "Interactive programmer",
+    type: "Object-recognition table",
+    categories: ["interactive-systems", "real-time"],
+    image: "/images/du-journey.jpg",
+    thumbPosition: "62% 45%",
+    thumbPositionFeatured: "62% 45%",
+    hero: "/images/du-journey.jpg",
+    heroVideo: "/video/du-journey-tutorial.mp4",
+    mediaNote: "In-app tutorial · 3D animation of the table",
+    heroAlt:
+      "The in-app tutorial for the du Journey table, a 3D animation: a visitor walks up to the DISPLAX table, places the printed du tag on the glass and turns it, and the row of journey videos slides across the table",
+    imageAlt:
+      "A frame from the du Journey table tutorial: a hand turning the printed du tag on the glass while a row of journey videos slides across the table",
+    specs: ["3 physical tags", "30 video journeys", "60 Hz tag simulation", "24/7 unattended"],
+    stack: [
+      "Electron",
+      "Node.js",
+      "TUIO over UDP",
+      "DISPLAX object recognition",
+      "ffmpeg",
+      "SVG filters",
+      "Scripted Windows deployment",
+    ],
+    summary:
+      "A DISPLAX object-recognition table for du. Turning a printed tag scrolls through thirty video journeys. One Electron application replaced a compiled Flash build, its Adobe AIR runtime and a separate Python browser window.",
+    sections: [
+      {
+        heading: "What the table does",
+        body: [
+          "A visitor puts a printed tag on the table and the journey wheel wakes up. Turning the tag scrolls through thirty video journeys, each one starting from its first frame as it arrives, and lifting the tag sends everything back to journey one.",
+          "A second tag opens a short tutorial that grows out of wherever the tag was placed. A third opens a live web page inside the experience, with a keyboard drawn on the glass, so people can log in without ever seeing a desktop.",
+        ],
+      },
+      {
+        heading: "What it replaced",
+        body: [
+          "The table came with a build from a previous team: a compiled Flash application running on Adobe AIR, thirty Flash video files, and a separate Python browser window bolted on the side. I replaced all of it with one Electron application.",
+          "Node reads the table's TUIO stream straight off the UDP port, the videos were converted to H.264 so the machine can decode them in hardware, and the web page lives inside the app as a native browser view rather than a second program fighting for the touch surface.",
+        ],
+      },
+      {
+        heading: "Tracking before pixels",
+        body: [
+          "Reading rotation reliably was the riskiest part, so it came first. Presence comes from the table's alive messages, rotation accumulates across full turns instead of trusting a raw angle, and a small spring simulation runs at a fixed 60 Hz so the wheel settles like a weighted dial instead of snapping. Everything that tunes the feel sits in one config file next to the executable.",
+        ],
+      },
+      {
+        heading: "Rebuilding what was inherited",
+        body: [
+          "The old build shipped as compiled Flash and its video format no longer plays in a modern browser engine. The new one watches a content folder, so swapping a journey means dropping in a file and nothing else. Ordering, labels and thumbnails come from the filenames.",
+        ],
+      },
+      {
+        heading: "Surprises on site",
+        body: [
+          "The table's sensor reports X mirrored against the picture. The wheel had passed every test by luck, because its target sits three pixels from the centre line, where a mirror image lands almost on top of itself. The tutorial tag exposed it within seconds. The fix is a transform in the config with a live readout of raw and corrected coordinates, so the next table can be dialled in without a rebuild.",
+          "The browser modal went through a rewrite too: the first version showed a blank panel when the connection failed, the final one says why, logs every navigation, and raises the keyboard the moment a text box takes focus.",
+        ],
+      },
+      {
+        heading: "Left running",
+        body: [
+          "It is installed as a portable build with a watchdog script, autostart, a nightly restart, and plain text logs an operator can read.",
+        ],
+      },
+    ],
+  },
 ];
 
 export const categories = [

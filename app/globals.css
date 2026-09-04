@@ -781,11 +781,33 @@ button {
 /* At two-column widths the third card would orphan; span it instead */
 
 @media (min-width: 721px) and (max-width: 1140px) {
-  .featured-grid > .reveal:nth-child(3),
-  .featured-grid > .seq__gridcell:nth-child(3),
-  .featured-grid > .feature-card:nth-child(3) {
+  .featured-grid > .reveal:nth-child(3):last-child,
+  .featured-grid > .seq__gridcell:nth-child(3):last-child,
+  .featured-grid > .feature-card:nth-child(3):last-child {
     grid-column: 1 / -1;
   }
+}
+
+.case__specs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0;
+  margin: 1.4rem 0 0;
+  padding: 0;
+}
+
+.case__specs li {
+  color: var(--text-2);
+  padding-right: 0.9rem;
+  margin-right: 0.9rem;
+  border-right: 1px solid var(--line);
+}
+
+.case__specs li:last-child {
+  padding-right: 0;
+  margin-right: 0;
+  border-right: 0;
 }
 
 .feature-card {
@@ -2847,5 +2869,12 @@ button {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+}
+
+@media (min-width: 1141px) {
+  .featured-grid,
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

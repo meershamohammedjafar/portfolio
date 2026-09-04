@@ -1,6 +1,6 @@
 # Meersha Jafar, portfolio
 
-Personal site of an interactive and computer vision engineer based in Dubai. It shows three kiosk projects (one Unreal Engine prototype, two concepts in spec), a short profile, and the ways to get in touch.
+Personal site of an interactive and computer vision engineer based in Dubai. It shows four projects (an installed DISPLAX object-recognition table, an Unreal Engine prototype, and two concepts in spec), a short profile, and the ways to get in touch.
 
 Built with Next.js 15 (App Router), React 19 and plain JavaScript. No Tailwind, no component library: one global stylesheet in `app/globals.css`. Smooth scrolling uses [Lenis](https://github.com/darkroomengineering/lenis). Fonts are Archivo and IBM Plex Mono, self-hosted through `next/font`.
 
@@ -23,7 +23,7 @@ npm run build
 
 | Path | What it is |
 | --- | --- |
-| `data/projects.js` | All content: the three projects, the site identity, contact details. Edit this to change what the site says. |
+| `data/projects.js` | All content: the four projects, the site identity, contact details. Edit this to change what the site says. |
 | `app/` | Routes: `/`, `/projects`, `/projects/[slug]`, `/about`, `/contact`, plus the root layout and global CSS. |
 | `components/` | The pieces the routes are built from (see below). |
 | `public/images`, `public/video` | Thumbnails, portraits, the Nissan capture videos, contact badges. |
@@ -41,7 +41,7 @@ Adding a project means adding one object to the `projects` array in `data/projec
 
 ## Media
 
-The Nissan Horizon videos are recordings of the prototype running in the Unreal Editor, filmed off the monitor. The other two projects use concept visuals and say so on the page.
+The Nissan Horizon videos are recordings of the prototype running in the Unreal Editor, filmed off the monitor. The du Journey table's video is the table's own in-app tutorial, a 3D animation. The other two projects use concept visuals and say so on the page.
 
 ## Deploying
 

@@ -61,7 +61,7 @@ const journey = [
   },
   {
     year: "2026",
-    what: "Rebuilt a Nissan showroom kiosk into Unreal Engine 5.8, gesture input and all.",
+    what: "Rebuilt a Nissan showroom kiosk into Unreal Engine 5.8, gesture input and all. Replaced a du DISPLAX table's Flash build with one Electron app and left it running unattended.",
   },
   {
     year: "Next",

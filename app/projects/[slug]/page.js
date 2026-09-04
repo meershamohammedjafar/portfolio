@@ -64,6 +64,16 @@ export default async function ProjectPage({ params }) {
             ))}
           </div>
 
+          {project.specs?.length ? (
+            <ul className="case__specs">
+              {project.specs.map((item) => (
+                <li key={item} className="tag">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+
           <div className="case__meta">
             {meta.map((row) => (
               <div key={row.label} className="case__meta-row">
