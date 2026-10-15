@@ -257,7 +257,7 @@ export const projects = [
     categories: ["interactive-systems", "real-time"],
     image: "/images/race-across-dubai.jpg",
     thumbPosition: "50% 50%",
-    thumbPositionFeatured: "50% 45%",
+    thumbPositionFeatured: "50% 50%",
     hero: "/images/race-across-dubai.jpg",
     heroVideo: "/video/race-across-dubai.mp4",
     mediaNote: "Concept run-through in the LED room · filmed on site",
