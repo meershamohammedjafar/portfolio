@@ -242,6 +242,75 @@ export const projects = [
       },
     ],
   },
+  {
+    slug: "race-across-dubai",
+    number: "05",
+    title: "Race Across Dubai",
+    tagline: "Two people run on the spot. An LED room races them across the city.",
+    site: "Dubai Fitness Challenge",
+    status: "Client demo",
+    statusTone: "live",
+    year: "2026",
+    location: "Dubai, UAE",
+    role: "Interactive developer",
+    type: "Immersive LED room",
+    categories: ["interactive-systems", "real-time"],
+    image: "/images/race-across-dubai.jpg",
+    thumbPosition: "50% 50%",
+    thumbPositionFeatured: "50% 45%",
+    hero: "/images/race-across-dubai.jpg",
+    heroVideo: "/video/race-across-dubai.mp4",
+    mediaNote: "Concept run-through in the LED room · filmed on site",
+    heroAlt:
+      "Race Across Dubai in the LED room: a visitor signs up at the kiosk, two runners race on the spot on the LED floor while the walls race them through night-time Dubai, and the winner is introduced on the winner screen with their energy animal",
+    imageAlt:
+      "Two runners on the glowing LED floor pads, the walls around them showing the race through Dubai with each runner's steps per second",
+    process: [
+      {
+        type: "image",
+        src: "/images/race-across-dubai-winner.jpg",
+        caption: "Winner screen · a sports-broadcast intro with the runner's energy animal",
+      },
+    ],
+    specs: ["4 PCs + iPad", "2 runners per race", "13 energy animals", "Offline, room Wi-Fi only"],
+    stack: [
+      "Python · FastAPI",
+      "WebSockets",
+      "TUIO over UDP",
+      "Three.js",
+      "TypeScript · Vite",
+      "MediaPipe",
+      "Higgsfield AI",
+      "Pillow",
+      "Portable Windows package",
+    ],
+    summary:
+      "A two-lane running game for an LED room at the Dubai Fitness Challenge. Visitors sign themselves up, run on the spot on a pressure-sensing LED floor, and race each other across a 3D night-time Dubai on the walls. The winner gets a broadcast-style introduction and a card to take home.",
+    sections: [
+      {
+        heading: "How a visit works",
+        body: [
+          "A self-service kiosk takes the visitor's name and consent, and the photo takes itself only when they are looking at the camera. They join a queue on the host's iPad, which is the only way to start a race: standing on the pads never starts one by accident.",
+          "On GO, every foot landing on the LED floor is a step, and steps are the race. The walls and ceiling run the 3D city past both runners in their own lane colours, with live steps per second, a map and a finish line.",
+          "After the finish, a winner screen introduces the champion like a sports star, with their energy animal, fastest feet and top speed, and every runner gets a QR code to their own result page, with Instagram Story and WhatsApp Status sharing.",
+        ],
+      },
+      {
+        heading: "Under the hood",
+        body: [
+          "One race PC runs everything: a Python server reads the floor's TUIO touches over UDP, turns them into footsteps with guards against double triggers and sensor storms, and pushes the race state to the walls, floor, kiosk, winner screen and iPad over WebSockets.",
+          "The whole system ships as a portable Windows package with its own Python inside: unzip, double-click, race. It runs fully offline on the room's Wi-Fi, with a daily purge of every photo and result page.",
+        ],
+      },
+      {
+        heading: "The AI layer",
+        body: [
+          "With the visitor's consent, a jersey image of them is made from the kiosk photo. It has to look like them, at their real age, keeping what they wear, glasses and head covering included. Staff approve every image on the iPad before any screen shows it, and an offline face check flags images that don't look like the person.",
+          "The approved image is cut out and placed in front of a pre-made looping video of the winner's energy animal, colour-matched to the scene, so the moment of winning costs nothing to generate and never waits on a network.",
+        ],
+      },
+    ],
+  },
 ];
 
 export const categories = [
