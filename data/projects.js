@@ -248,8 +248,8 @@ export const projects = [
     title: "Race Across Dubai",
     tagline: "Two people run on the spot. An LED room races them across the city.",
     site: "Dubai Fitness Challenge",
-    status: "Client demo",
-    statusTone: "live",
+    status: "Concept",
+    statusTone: "spec",
     year: "2026",
     location: "Dubai, UAE",
     role: "Interactive developer",
@@ -285,7 +285,7 @@ export const projects = [
       "Portable Windows package",
     ],
     summary:
-      "A two-lane running game for an LED room at the Dubai Fitness Challenge. Visitors sign themselves up, run on the spot on a pressure-sensing LED floor, and race each other across a 3D night-time Dubai on the walls. The winner gets a broadcast-style introduction and a card to take home.",
+      "A two-lane running game concept for an LED room at the Dubai Fitness Challenge. Visitors sign themselves up, run on the spot on a pressure-sensing LED floor, and race each other across a 3D night-time Dubai on the walls. The winner gets a broadcast-style introduction and a card to take home.",
     sections: [
       {
         heading: "How a visit works",
