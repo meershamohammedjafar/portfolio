@@ -256,15 +256,15 @@ export const projects = [
     type: "Immersive LED room",
     categories: ["interactive-systems", "real-time"],
     image: "/images/race-across-dubai.jpg",
-    thumbPosition: "50% 50%",
-    thumbPositionFeatured: "50% 50%",
+    thumbPosition: "50% 35%",
+    thumbPositionFeatured: "50% 35%",
     hero: "/images/race-across-dubai.jpg",
     heroVideo: "/video/race-across-dubai.mp4",
     mediaNote: "Concept run-through in the LED room · filmed on site",
     heroAlt:
       "Race Across Dubai in the LED room: a visitor signs up at the kiosk, two runners race on the spot on the LED floor while the walls race them through night-time Dubai, and the winner is introduced on the winner screen with their energy animal",
     imageAlt:
-      "Two runners on the glowing LED floor pads, the walls around them showing the race through Dubai with each runner's steps per second",
+      "Race Across Dubai title card: two runners on glowing floor pads racing down a neon Dubai road towards the Burj Khalifa",
     process: [
       {
         type: "image",
